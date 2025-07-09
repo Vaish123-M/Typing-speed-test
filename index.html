@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+
+  <div class="container">
+    <h1>Typing Speed Test</h1>
+    <p id="quote">Loading text...</p>
+    <textarea id="input" placeholder="Start typing here..." disabled></textarea>
+
+    <div class="stats">
+  <p><strong>⏱ Time:</strong> <span id="time">0</span>s</p>
+  <p><strong>🧠 WPM:</strong> <span id="wpm">0</span></p>
+  <p><strong>✅ Accuracy:</strong> <span id="accuracy">0</span>%</p>
+</div>
+
+
+    <div id="result" class="result-box hidden">
+      <h2>Your Result</h2>
+      <p><strong>⏱ Time Taken:</strong> <span id="finalTime">0</span>s</p>
+      <p><strong>🧠WPM:</strong> <span id="finalWPM">0</span></p>
+      <p><strong>✅Accuracy:</strong> <span id="finalAccuracy">0</span>%</p>
+      <p id="feedbackMessage"></p>
+    </div>
+
+    <div class="buttons">
+      <button id="startBtn">Start Test</button>
+      <button id="stopBtn">Stop</button>
+     
+      <button id="restartBtn">Restart</button>
+      <button id="nextBtn">Next Paragraph</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
